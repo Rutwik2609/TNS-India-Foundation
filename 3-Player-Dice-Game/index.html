@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Player Dice Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game">
+    <h1>3-Player Dice Game</h1>
+    <div id="status" class="result"><p>Player 1's turn!</p></div>
+
+    <div class="container">
+        <div id="player1" class="player active">
+            <h3>Player 1</h3>
+            <p class="dice" id="dice1">🎲</p>
+            <button id="rollBtn1" class="roll-btn" onclick="rollDice(1)">Roll Dice</button>
+        </div>
+
+        <div id="player2" class="player">
+            <h3>Player 2</h3>
+            <p class="dice" id="dice2">🎲</p>
+            <button id="rollBtn2" class="roll-btn" onclick="rollDice(2)" disabled>Roll Dice</button>
+        </div>
+
+        <div id="player3" class="player">
+            <h3>Player 3</h3>
+            <p class="dice" id="dice3">🎲</p>
+            <button id="rollBtn3" class="roll-btn" onclick="rollDice(3)" disabled>Roll Dice</button>
+        </div>
+    </div>
+
+    <div class="result" id="result"><p>Press roll for each player to see who wins!</p></div>
+    <button id="resetBtn" class="reset-btn" onclick="resetGame()" style="display: none;"><p>Play Again</p></button>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
